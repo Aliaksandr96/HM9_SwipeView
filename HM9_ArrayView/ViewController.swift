@@ -22,6 +22,10 @@ class ViewController: UIViewController {
         imageView.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
         imageView.center = view.center
         imageView.image = UIImage(named: imageArray[currentImage])
+        imageView.layer.shadowColor = UIColor.yellow.cgColor
+        imageView.layer.shadowOpacity = 1
+        imageView.layer.shadowOffset = .zero
+        imageView.layer.shadowRadius = 25
         view.addSubview(imageView)
         
         let swipeLeft = UISwipeGestureRecognizer()
